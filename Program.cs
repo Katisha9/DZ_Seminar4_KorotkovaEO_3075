@@ -23,24 +23,24 @@ double GetPow(int num1, int num2)
 // 452 -> 11
 // 82 -> 10
 // 9012 -> 12
-Console.Write("Введите число: ");
-int num = int.Parse(Console.ReadLine()!);
-Console.WriteLine($"Сумма цифр в числе {num} = {GetSumm(num)}");
+// Console.Write("Введите число: ");
+// int num = int.Parse(Console.ReadLine()!);
+// Console.WriteLine($"Сумма цифр в числе {num} = {GetSumm(num)}");
 
-int GetSumm (int num1)
-{
+// int GetSumm (int num1)
+// {
 
-    int result = 0;
-    while (num1 > 0)
-    {
+//     int result = 0;
+//     while (num1 > 0)
+//     {
 
-        result = result + num1 % 10;
-        num1 = num1 / 10;
+//         result = result + num1 % 10;
+//         num1 = num1 / 10;
 
-    }
-return result;
+//     }
+// return result;
 
-}
+// }
 
 // Задача 29: Напишите программу, которая задаёт массив из 8 рандомных элементов и выводит их на экран.
 // 1, 2, 5, 7, 19 -> [1, 2, 5, 7, 19]
@@ -59,3 +59,25 @@ int[] FillArray(int size)
 return result;
 }
 */
+
+
+//Задача 25: Напишите цикл, который принимает на вход два числа (A и B) и возводит число A в натуральную степень B.
+//3, 5 -> 243 (3⁵)
+//2, 4 -> 16
+//Решение через цикл
+Console.Write("Введите число А: ");
+int a = int.Parse(Console.ReadLine()!);
+Console.Write("Введите натуральное число B: ");
+int b = int.Parse(Console.ReadLine()!);
+
+Console.WriteLine($"Число {a} в степени {b} = {GetPow(a, b)}");
+
+int GetPow(int num1, int num2)
+{
+    int num3=1;
+    for (int i=1; i<=num2; i++)
+       {
+       num3 = num3*num1;
+       }
+return num3;
+}
